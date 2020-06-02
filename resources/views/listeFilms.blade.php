@@ -27,7 +27,7 @@
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCategory" aria-controls="navbarCategory" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
-            <a class="btn-outline-success" href="{{url('/ajoutFilm')}}">Ajouter un film
+            <a class="ajout-button btn-outline-success" href="{{url('/ajoutFilm')}}">Ajouter un film
                 <span class="sr-only">(current)</span>
             </a>
             <div class="collapse navbar-collapse" id="navbarCategory">
@@ -53,7 +53,9 @@
 
         </div>
     </nav>
-
+    @if(!empty($deleteMessage))
+        <div class="badge-success">{{$deleteMessage}}</div>
+    @endif
     <table class="table table-bordered table-striped">
         <thead>
             <th>Titre</th>
